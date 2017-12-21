@@ -11,9 +11,11 @@ $("#start").on("click", function(){
 	timerId = setInterval(countdown, 1000);
 });
 
-//stops clock upon submit click
+//stops clock on submit click, run checkScore()
 submitButton = $('#submit').click(function() {
     clearInterval(timerId);
+    console.log("hey");
+    checkScore();
 });
 
 //timer function
@@ -27,18 +29,21 @@ function countdown() {
     else if (timeLeft === 0) {
         clearInterval(timerId);
         checkScore();
-    } 
-    else if (submitButton) {
-        checkScore();
     }
 };
 
-var radioValueOne = $("input[type='radio']:checked").val();
-console.log(radioValueOne);
-
-
 //check value selected, update score
+//pull value from user answers********
 function checkScore () {
+
+    var radioValueOne = $("input[type='radio'][name='Q1']:checked").val();
+    var radioValueTwo = $("input[type='radio'][name='Q2']:checked").val();
+    var radioValueThree = $("input[type='radio'][name='Q3']:checked").val();
+
+    $("#corrAnswers").html(correct);
+    $("#wrongAnswers").html(incorrect);
+    $("#noAnswer").html(unanswered);
+
     if (radioValueOne === "correct") {
         correct++;
         $("#corrAnswers").html(correct);
@@ -47,12 +52,35 @@ function checkScore () {
         incorrect++;
         $("#wrongAnswers").html(incorrect);
     }
-    else if (radioValueOne !== "correct" || radioValueOne !== "incorrect") {
+    else if (radioValueOne !== "correct" && radioValueOne !== "incorrect") {
         unanswered++;
-        $("#noAnswers").html(unanswered);
+        $("#noAnswer").html(unanswered);
+    }
+    if (radioValueTwo === "correct") {
+        correct++;
+        $("#corrAnswers").html(correct);
+    }
+    else if (radioValueTwo === "incorrect") {
+        incorrect++;
+        $("#wrongAnswers").html(incorrect);
+    }
+    else if (radioValueTwo !== "correct" && radioValueTwo !== "incorrect") {
+        unanswered++;
+        $("#noAnswer").html(unanswered);
+    }
+    if (radioValueThree === "correct") {
+        correct++;
+        $("#corrAnswers").html(correct);
+    }
+    else if (radioValueThree === "incorrect") {
+        incorrect++;
+        $("#wrongAnswers").html(incorrect);
+    }
+    else if (radioValueThree !== "correct" && radioValueThree !== "incorrect") {
+        unanswered++;
+        $("#noAnswer").html(unanswered);
     }
 };
-
 
 // var radioValueTwo = $("input[name='Q2']:checked").val();
 // var radioValueThree = $("input[name='Q3']:checked").val();
