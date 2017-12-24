@@ -1,5 +1,5 @@
 //timer created on click
-var timeLeft = 5;
+var timeLeft = 20;
 var timerId;
 var submitButton;
 var correct = 0;
@@ -14,7 +14,6 @@ $("#start").on("click", function(){
 //stops clock on submit click, run checkScore()
 submitButton = $('#submit').click(function() {
     clearInterval(timerId);
-    console.log("hey");
     checkScore();
 });
 
@@ -39,11 +38,14 @@ function checkScore () {
     var radioValueOne = $("input[type='radio'][name='Q1']:checked").val();
     var radioValueTwo = $("input[type='radio'][name='Q2']:checked").val();
     var radioValueThree = $("input[type='radio'][name='Q3']:checked").val();
+    var radioValueFour = $("input[type='radio'][name='Q4']:checked").val();
+    var radioValueFive = $("input[type='radio'][name='Q5']:checked").val();
 
     $("#corrAnswers").html(correct);
     $("#wrongAnswers").html(incorrect);
     $("#noAnswer").html(unanswered);
 
+    //not the most DRY coding...
     if (radioValueOne === "correct") {
         correct++;
         $("#corrAnswers").html(correct);
@@ -80,14 +82,28 @@ function checkScore () {
         unanswered++;
         $("#noAnswer").html(unanswered);
     }
+    if (radioValueFour === "correct") {
+        correct++;
+        $("#corrAnswers").html(correct);
+    }
+    else if (radioValueFour === "incorrect") {
+        incorrect++;
+        $("#wrongAnswers").html(incorrect);
+    }
+    else if (radioValueFour !== "correct" && radioValueFour !== "incorrect") {
+        unanswered++;
+        $("#noAnswer").html(unanswered);
+    }
+    if (radioValueFive === "correct") {
+        correct++;
+        $("#corrAnswers").html(correct);
+    }
+    else if (radioValueFive === "incorrect") {
+        incorrect++;
+        $("#wrongAnswers").html(incorrect);
+    }
+    else if (radioValueFive !== "correct" && radioValueFive !== "incorrect") {
+        unanswered++;
+        $("#noAnswer").html(unanswered);
+    }
 };
-
-// var radioValueTwo = $("input[name='Q2']:checked").val();
-// var radioValueThree = $("input[name='Q3']:checked").val();
-// var radioValueFour = $("input[name='Q4']:checked").val();
-// var radioValueFive = $("input[name='Q5']:checked").val();
-// var radioValueSix = $("input[name='Q6']:checked").val();
-// var radioValueSeven = $("input[name='Q7']:checked").val();
-// var radioValueEight = $("input[name='Q8']:checked").val();
-// var radioValueNine = $("input[name='Q9']:checked").val();
-// var radioValueTen = $("input[name='Q10']:checked").val();

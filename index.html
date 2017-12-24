@@ -8,104 +8,64 @@
     <title>Trivia Game</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="assets/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
 
   </head>
   <body>
-
-  <h1>Welcome to Savannah, Georgia Trivia!</h1>
+  
+  <h1>Welcome to Sports Trivia!</h1>
 
   <h2><button id="start">Ready to Start!</button></h2>
 
 <p>
-  <h3>Question 1</h3>
-    <input type="radio" name="Q1" value="incorrect"> Answer1<br>
-    <input type="radio" name="Q1" value="correct"> Answer2<br>
-    <input type="radio" name="Q1" value="incorrect"> Answer3<br>
-    <input type="radio" name="Q1" value="incorrect"> Answer4<br>
+  <h3>1. Which of these teams once won a record 8 consecutive championships?</h3>
+    <div id="choices">
+      <input type="radio" name="Q1" value="incorrect"> St. Louis Cardinals
+      <input type="radio" name="Q1" value="incorrect"> Los Angeles Lakers
+      <input type="radio" name="Q1" value="correct"> Boston Celtics
+      <input type="radio" name="Q1" value="incorrect"> Toronto Maple Leafs
+    </div>
+<br>
+  <h3>2. Glenn Hall's record of 502 consecutive games in _____ is made more impressive by the fact he never wore a helmet:</h3>
+    <div id="choices">
+      <input type="radio" name="Q2" value="incorrect"> World Cricket League
+      <input type="radio" name="Q2" value="correct"> National Hockey League
+      <input type="radio" name="Q2" value="incorrect"> National Football League
+      <input type="radio" name="Q2" value="incorrect"> Major League Baseball
+    </div>
+  <br>
+  <h3>3. Fernando Tatis is the only person in baseball history to ever perform what feat twice in the same inning?</h3>
+    <div id="choices">
+      <input type="radio" name="Q3" value="correct"> Hit a grand slam
+      <input type="radio" name="Q3" value="incorrect"> Steal Home
+      <input type="radio" name="Q3" value="incorrect"> Strike Out
+      <input type="radio" name="Q3" value="incorrect"> Get in a fight with an umpire
+    </div>
+    <br>
+    <h3>4. What team went 0-14 in 1976, its first year, then 0-12 the next year to set the record for consecutive football losses?</h3>
+      <div id="choices">
+        <input type="radio" name="Q4" value="incorrect"> Carolina Panthers
+        <input type="radio" name="Q4" value="incorrect"> New York Jets
+        <input type="radio" name="Q4" value="incorrect"> Cleveland Browns
+        <input type="radio" name="Q4" value="correct"> Tampa Bay Buccaneers
+      </div>
+      <br>
+      <h3>5. In 2010, a _____ lasted for an absurd 11 hours and 5 minutes.</h3>
+        <div id="choices">
+          <input type="radio" name="Q5" value="incorrect"> College football game
+          <input type="radio" name="Q5" value="correct"> Wimbledon tennis match
+          <input type="radio" name="Q5" value="incorrect"> Major League Baseball game
+          <input type="radio" name="Q5" value="incorrect"> College baseball game
+        </div>
 </p>
-<p>
-  <h3>Question 2</h3>
-    <input type="radio" name="Q2" value="incorrect"> Answer1<br>
-    <input type="radio" name="Q2" value="correct"> Answer2<br>
-    <input type="radio" name="Q2" value="incorrect"> Answer3<br>
-    <input type="radio" name="Q2" value="incorrect"> Answer4<br>
-</p>
-<p>
-  <h3>Question 3</h3>
-      <input type="radio" name="Q3" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q3" value="correct"> Answer2<br>
-      <input type="radio" name="Q3" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q3" value="incorrect"> Answer4<br>
-  </p>
 
-<div>
-    <button id="submit" type="submit">Submit Answers</button>
-</div>
+  <h2><button id="submit" type="submit">Submit Answers</button></h2>
 
-<h2>Correct Answers: <span id="corrAnswers"></span></h2>
-<h2>Incorrect Answers: <span id="wrongAnswers"></span></h2>
-<h2>Unanswered: <span id="noAnswer"></span></h2>
+<h3>Correct Answers: <span id="corrAnswers"></span></h3>
+<h3>Incorrect Answers: <span id="wrongAnswers"></span></h3>
+<h3>Unanswered: <span id="noAnswer"></span></h3>
 
     <script src="assets/javascript/app.js"></script>
   </body>
 </html>
-
-<!--<p>
-    <h3>Question 3</h3>
-      <input type="radio" name="Q3" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q3" value="correct"> Answer2<br>
-      <input type="radio" name="Q3" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q3" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 4</h3>
-      <input type="radio" name="Q4" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q4" value="correct"> Answer2<br>
-      <input type="radio" name="Q4" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q4" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 5</h3>
-      <input type="radio" name="Q5" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q5" value="correct"> Answer2<br>
-      <input type="radio" name="Q5" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q5" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 6</h3>
-      <input type="radio" name="Q6" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q6" value="correct"> Answer2<br>
-      <input type="radio" name="Q6" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q6" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 7</h3>
-      <input type="radio" name="Q7" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q7" value="correct"> Answer2<br>
-      <input type="radio" name="Q7" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q7" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 8</h3>
-      <input type="radio" name="Q8" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q8" value="correct"> Answer2<br>
-      <input type="radio" name="Q8" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q8" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 9</h3>
-      <input type="radio" name="Q9" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q9" value="correct"> Answer2<br>
-      <input type="radio" name="Q9" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q9" value="incorrect"> Answer4<br>
-  </p>
-  <p>
-    <h3>Question 10</h3>
-      <input type="radio" name="Q10" value="incorrect"> Answer1<br>
-      <input type="radio" name="Q10" value="correct"> Answer2<br>
-      <input type="radio" name="Q10" value="incorrect"> Answer3<br>
-      <input type="radio" name="Q10" value="incorrect"> Answer4<br>
-  </p>-->
-  
