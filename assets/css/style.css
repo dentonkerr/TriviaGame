@@ -1,4 +1,21 @@
+
 body {
     text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: black;
+    background-color: lightgray;
+    
+}
+
+.jumbotron {
+    background-image: url("../images/background.jpeg");
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 1.4vw;
 }
 

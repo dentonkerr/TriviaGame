@@ -9,14 +9,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
   </head>
   <body>
-  
-  <h1>Welcome to Sports Trivia!</h1>
-
-  <h2><button id="start">Ready to Start!</button></h2>
+    
+  <div class="jumbotron">
+    <h1>Welcome to Sports Trivia!</h1>
+    <h2><button id="start">Ready to Start!</button></h2>
+  </div>
 
 <p>
   <h3>1. Which of these teams once won a record 8 consecutive championships?</h3>
@@ -43,28 +45,29 @@
       <input type="radio" name="Q3" value="incorrect"> Get in a fight with an umpire
     </div>
     <br>
-    <h3>4. What team went 0-14 in 1976, its first year, then 0-12 the next year to set the record for consecutive football losses?</h3>
-      <div id="choices">
-        <input type="radio" name="Q4" value="incorrect"> Carolina Panthers
-        <input type="radio" name="Q4" value="incorrect"> New York Jets
-        <input type="radio" name="Q4" value="incorrect"> Cleveland Browns
-        <input type="radio" name="Q4" value="correct"> Tampa Bay Buccaneers
-      </div>
-      <br>
-      <h3>5. In 2010, a _____ lasted for an absurd 11 hours and 5 minutes.</h3>
-        <div id="choices">
-          <input type="radio" name="Q5" value="incorrect"> College football game
-          <input type="radio" name="Q5" value="correct"> Wimbledon tennis match
-          <input type="radio" name="Q5" value="incorrect"> Major League Baseball game
-          <input type="radio" name="Q5" value="incorrect"> College baseball game
-        </div>
+  <h3>4. What team went 0-14 in 1976, its first year, then 0-12 the next year to set the record for consecutive football losses?</h3>
+    <div id="choices">
+      <input type="radio" name="Q4" value="incorrect"> Carolina Panthers
+      <input type="radio" name="Q4" value="incorrect"> New York Jets
+      <input type="radio" name="Q4" value="incorrect"> Cleveland Browns
+      <input type="radio" name="Q4" value="correct"> Tampa Bay Buccaneers
+    </div>
+    <br>
+  <h3>5. In 2010, a _____ lasted for an absurd 11 hours and 5 minutes.</h3>
+    <div id="choices">
+      <input type="radio" name="Q5" value="incorrect"> College football game
+      <input type="radio" name="Q5" value="correct"> Wimbledon tennis match
+      <input type="radio" name="Q5" value="incorrect"> Major League Baseball game
+      <input type="radio" name="Q5" value="incorrect"> College baseball game
+    </div>
 </p>
 
-  <h2><button id="submit" type="submit">Submit Answers</button></h2>
+<h2><button id="submit" type="submit">Submit Answers</button></h2>
 
 <h3>Correct Answers: <span id="corrAnswers"></span></h3>
 <h3>Incorrect Answers: <span id="wrongAnswers"></span></h3>
 <h3>Unanswered: <span id="noAnswer"></span></h3>
+
 
     <script src="assets/javascript/app.js"></script>
   </body>
